@@ -131,9 +131,9 @@ class _ChatScreenState extends State<ChatScreen> {
                                 return SizedBox();
                               }
 
-                              final data =
-                                  snapshot.data!.data() as Map<String, dynamic>;
-                              final typingUserId = data['typing'];
+                              final data = snapshot.data!.data()
+                                  as Map<String, dynamic>?;
+                              final typingUserId = data?['typing'];
                               final isTyping = typingUserId != null &&
                                   typingUserId != widget.currentUserId;
 
